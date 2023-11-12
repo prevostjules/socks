@@ -1,9 +1,5 @@
-function main () {
-    const cleanSocks = ['red', 'blue', 'blue', 'yellow']
-    const dirtySocks = ['red', 'orange', 'orange', 'blue', 'blue']
-
+function calculateNumberOfSocksToPack (cleanSocks, dirtySocks, k) {
     let socksPairsToPackCount = 0
-
     const cleanSocksByColor = {}
 
     cleanSocks.forEach((sock) => {
@@ -16,7 +12,6 @@ function main () {
     })
 
     const dirtySocksByColor = {}
-    const k = 20
     let socksToWash = 0
 
     for(let i = 0; i < dirtySocks.length && socksToWash < k; i++) {
@@ -42,7 +37,10 @@ function main () {
         }
     }
 
-    console.log(socksPairsToPackCount)
+    return socksPairsToPackCount
 }
 
-main()
+const cleanSocks = ['red', 'blue', 'blue', 'yellow']
+const dirtySocks = ['red', 'orange', 'orange', 'blue', 'blue']
+const k = 20
+console.log(calculateNumberOfSocksToPack(cleanSocks, dirtySocks, k))
