@@ -1,8 +1,4 @@
-def calculate_pairs_socks_to_pack
-  k = 3
-  clean_socks = %w[blue orange orange green]
-  dirty_socks = %w[red red blue yellow]
-
+def calculate_pairs_socks_to_pack(clean_socks, dirty_socks, k)
   sock_pairs_to_pack_count = 0
   clean_socks_by_color = {}
 
@@ -48,7 +44,10 @@ def calculate_pairs_socks_to_pack
     end
   end
 
-  p sock_pairs_to_pack_count
+  sock_pairs_to_pack_count
 end
 
-calculate_pairs_socks_to_pack
+k = 3
+clean_socks = %w[blue orange orange green]
+dirty_socks = %w[red red blue yellow]
+p calculate_pairs_socks_to_pack(clean_socks, dirty_socks, k)
