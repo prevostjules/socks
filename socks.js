@@ -32,8 +32,12 @@ function calculateNumberOfSocksToPack (cleanSocks, dirtySocks, k) {
             break;
         }
         if(value % 2 === 0) {
-            socksToWash += value / 2
-            socksPairsToPackCount += value / 2
+            let socksCount = value
+            if (value > k - socksToWash) {
+                socksCount = k - socksToWash
+            }
+            socksToWash += socksCount
+            socksPairsToPackCount += Math.floor(socksCount / 2)
         }
     }
 
