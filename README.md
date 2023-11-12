@@ -1,6 +1,6 @@
 # Socks algorithm
 
-Here is the question I have been asked during a coding interview.
+Here is the question I have been asked during a coding interview and that I wanted to replicate in one hour or less for training purposes.
 
 Let's say you want to go on holidays. 
 
